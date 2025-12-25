@@ -1,1 +1,1 @@
-# cs50x-final-project
+# cs50x-project
