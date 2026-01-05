@@ -1,4 +1,4 @@
-#left_black_rectangle {
+#left-black-rectangle {
     color: black;
     background-color: black;
     width: 20vw;
@@ -6,7 +6,117 @@
 
 }
 
-.linkedin_element {
+#grey-rectangle {
+    color: grey;
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 20%;
+    width: 80vw;
+    height: 25vh;
+    z-index: -1;
+}
+
+#black-rectangle-project {
+    color: black;
+    background-color: black;
+    width: 100vw;
+    height: 10vh;
+}
+
+.grey-complete {
+    color: grey;
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+}
+
+.white-line-vertical {
+    color: white;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 50%;
+    width: 1px;
+    height: 100vh;
+    z-index: 5;
+}
+
+.white-line-horizontal {
+    color: white;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 22%;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    z-index: 5;
+}
+
+.second-white-line-horizontal {
+    color: white;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 0%;
+    width: 100vw;
+    height: 1px;
+    z-index: 5;
+}
+
+#image-location {
+    color: white;
+    background-color: blueviolet;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 20%;
+    width: 20vw;
+    height: 25vh;
+    z-index: -1;
+}
+
+.image-location_project {
+    color: blueviolet;
+    background-color: blueviolet;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 0%;
+    width: 50vw;
+    height: 50vh;
+    z-index: 3;
+}
+
+#link-element {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 20%;
+    width: 100vw;
+    height: 25vh;
+    z-index: 10;
+}
+
+.linkedin-element {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -16,7 +126,7 @@
     width: 5vw;
 }
 
-.github_element {
+.github-element {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -26,7 +136,7 @@
     width: 4vw;
 }
 
-.instagram_element {
+.instagram-element {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -36,7 +146,7 @@
     width: 3.5vw;
 }
 
-.twitter_element {
+.twitter-element {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -46,7 +156,7 @@
     width: 3.5vw;
 }
 
-.divider_element {
+.divider-element {
     color: white;
     position: fixed;
     width: 100%;
@@ -57,7 +167,7 @@
     width: 15vw;
 }
 
-.projects_element {
+.projects-element {
     color: white;
     background-color: black;
     position: fixed;
@@ -71,7 +181,7 @@
     text-decoration: none;
 }
 
-.writing_element {
+.writing-element {
     color: white;
     background-color: black;
     position: fixed;
@@ -84,7 +194,7 @@
     z-index: 1;
     text-decoration: none;
 }
-.contact_element {
+.contact-element {
     color: white;
     background-color: black;
     position: fixed;
@@ -98,7 +208,7 @@
     text-decoration: none;
 }
 
-.pictures_element {
+.pictures-element {
     color: white;
     background-color: black;
     position: fixed;
@@ -112,6 +222,67 @@
     text-decoration: none;
 }
 
+.go-back-element {
+    color: white;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 3%;
+    left: 3%;
+    height: 3.5vh;
+    width: 3.5vw;
+    z-index: 1;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.text-location {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 5%;
+    left: 42%;
+    width: 80vw;
+    height: 25vh;
+    z-index: 1;
+}
+
+.project-title {
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 11%;
+    left: 51%;
+    width: 25vw;
+    height: 6vh;
+    z-index: 10;
+}
+
+.github-repository {
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 16%;
+    left: 51.2%;
+    width: 25vw;
+    height: 6vh;
+    z-index: 10;
+}
+
+.README {
+    background-color: grey;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 25%;
+    left: 52%;
+    width: 25vw;
+    height: 10vh;
+    z-index: 10;
+}
 
 .text-size {
     font-size: 25px;
