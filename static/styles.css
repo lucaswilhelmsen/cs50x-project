@@ -248,6 +248,11 @@
     z-index: 1;
 }
 
+button {
+    border: none;
+    outline: none;
+}
+
 .project-title {
     background-color: grey;
     position: fixed;

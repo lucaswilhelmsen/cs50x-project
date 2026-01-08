@@ -4,8 +4,7 @@ import os
 
 templates = os.path.dirname(__file__)
 
-app = Flask(__name__,
-template_folder=docs)
+app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 
