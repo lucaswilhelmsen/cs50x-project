@@ -1,5 +1,5 @@
 from flask import Flask, request, session, render_template, redirect
-import flask_sqlalchemy
+from sqlalchemy import create_engine
 import os 
 
 templates = os.path.dirname(__file__)
@@ -8,6 +8,8 @@ app = Flask(__name__,
 template_folder=docs)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+
+engine = create_engine(app.config["SQLALCHEMY_DATABASE_URI"])
 
 @app.route("/")
 def index():
