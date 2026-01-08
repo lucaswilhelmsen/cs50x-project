@@ -15,6 +15,12 @@ engine = create_engine(app.config["SQLALCHEMY_DATABASE_URI"])
 def index():
     return render_template("index.html")
 
+@app.route("/first_project")
+def first_project():
+    if request.method == "GET":
+        return render_template("first_project.html")
+
+
 @app.route("/writing")
 def writing():
     return render_template("writing.html")
@@ -26,3 +32,4 @@ def contact():
 @app.route("/pictures")
 def pictures():
     return render_template("pictures.html")
+
