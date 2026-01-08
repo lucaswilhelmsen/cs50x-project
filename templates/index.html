@@ -14,19 +14,18 @@
         <a href="https://www.instagram.com/lucaswilhelmsen"><img class="instagram-element" src="../static/instagram-logo-white-circle-outline-icon-ig-app-transparent-background-premium-social-media-design-for-digital-download-free-png-removebg-preview.png"></a>
         <img class="divider-element" src="../static/textdivider.png">
 
-
-        <a href="index.html" id="projects" class="projects-element text-size">
-            Projects
-        </a>
-        <a href="writing.html" id="writing" class="writing-element text-size">
-            Writing
-        </a>
-        <a href="contact.html" id="contact" class="contact-element text-size">
-            Contact
-        </a>
-        <a href="pictures.html" id="pictures" class="pictures-element text-size">
-            Pictures
-        </a>
+        <form action="/index" method="GET">
+            <button class="projects-element text-size" id="projects">Projects</button>
+        </form>
+        <form action="/writing" method="GET">
+            <button class="writing-element text-size" id="writing">Writing</button>
+        </form>
+        <form action="/contact" method="GET">
+            <button class="contact-element text-size" id="contact">Contact</button>
+        </form>
+        <form action="/pictures" method="GET">
+            <button class="pictures-element text-size" id="pictures">Pictures</button>
+        </form>
 
         <form action="/first_project" method="GET">
             <button id="link-element"></button>
@@ -46,6 +45,12 @@
         <h1 class="text-location">CS50x Final Project</h1>
 
         <script>
+
+            document.getElementById("projects").style.border = "transparent";
+            document.getElementById("writing").style.border = "transparent";
+            document.getElementById("contact").style.border = "transparent";
+            document.getElementById("pictures").style.border = "transparent";
+
             document.getElementById("projects").addEventListener("mouseover", function () {
             document.getElementById("projects").style.textDecoration = "underline";
         });
