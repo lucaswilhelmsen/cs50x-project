@@ -18,8 +18,8 @@ def index():
 @app.route("/first_project")
 def first_project():
     if request.method == "GET":
-        engine.execute("")
-        return render_template("first_project.html")
+        result = engine.execute("SELECT * FROM projects")
+        return render_template("first_project.html", projects=result)
 
 
 @app.route("/writing")
