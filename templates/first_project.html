@@ -18,9 +18,8 @@
             
         </div>
 
-        <img class="image-location_project" alt="Missing image">
-        <h1 class="project-title">CS50x Final Project</h1>
-         {{ projects }}
+        <img class="image-location_project" src="{{ projects.image_url }}" alt="Missing image">
+        <h1 class="project-title">{{ projects }}</h1>
 
         <div class="white-line-vertical">
             
@@ -35,10 +34,10 @@
         </div>
 
         <h1 class="README">
-            README
+            {{ projects }}
         </h1>
 
-        <a href="https://github.com/lucaswilhelmsen/homepage" class="github-repository text-size">
+        <a href="{{ projects }} " class="github-repository text-size">
             GitHub Repository
         </a>
 
