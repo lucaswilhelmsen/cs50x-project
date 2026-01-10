@@ -19,22 +19,25 @@ def index():
 @app.route("/projects")
 def projects():
     session = Session()
-    result = list(session.execute(text("SELECT * FROM projects")).fetchall())
+    result = session.execute(text("SELECT image-address, project-title, github-link, readme FROM projects")).fetchall()
     session.close()
-    row_dict = []
+    data-list = []
     for row in result:
-        print(row)
-    return render_template("projects.html", projects=result)
+        project-dict = {
+            "image-address": row[0],
+            "project-title": row[1],
+            "github-link": row[2],
+            "readme": row[3]
+        }
+        
+        data-list.append(project-dict)
+
+    return render_template("projects.html", projects=data-list)
+
 
 
 @app.route("/writing")
 def writing():
-    session = Session()
-    result = list(session.execute(text("SELECT * FROM projects")).fetchall())
-    session.close()
-    row_dict = []
-    for row in result:
-        print(row)
     return render_template("writing.html")
 
 @app.route("/contact")
