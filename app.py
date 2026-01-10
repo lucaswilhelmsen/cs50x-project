@@ -1,5 +1,5 @@
 from flask import Flask, request, session, render_template, redirect
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 import os 
 
@@ -19,7 +19,7 @@ def index():
 @app.route("/projects")
 def projects():
     session = Session()
-    result = session.execute("SELECT * FROM projects")
+    result = session.execute(text("SELECT * FROM projects"))
     session.close()
     return render_template("projects.html", projects=result)
 
