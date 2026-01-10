@@ -1,5 +1,6 @@
 from flask import Flask, request, session, render_template, redirect
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 import os 
 
 templates = os.path.dirname(__file__)
@@ -9,6 +10,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 
 engine = create_engine(app.config["SQLALCHEMY_DATABASE_URI"])
+Session = sessionmaker(bind=engine)
 
 @app.route("/")
 def index():
@@ -16,7 +18,9 @@ def index():
 
 @app.route("/projects")
 def projects():
-    result = engine.execute("SELECT * FROM projects")
+    session = Session()
+    result = session.execute("SELECT * FROM projects")
+    session.close()
     return render_template("projects.html", projects=result)
 
 
