@@ -21,18 +21,18 @@ def projects():
     session = Session()
     result = session.execute(text("SELECT image-address, project-title, github-link, readme FROM projects")).fetchall()
     session.close()
-    data-list = []
+    data_list = []
     for row in result:
-        project-dict = {
+        project_dict = {
             "image-address": row[0],
             "project-title": row[1],
             "github-link": row[2],
             "readme": row[3]
         }
-        
-        data-list.append(project-dict)
 
-    return render_template("projects.html", projects=data-list)
+        data_list.append(project_dict)
+
+    return render_template("projects.html", projects=data_list)
 
 
 
