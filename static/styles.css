@@ -262,6 +262,7 @@ button {
     left: 51%;
     width: 25vw;
     height: 6vh;
+    white-space: nowrap;
     z-index: 10;
 }
 
