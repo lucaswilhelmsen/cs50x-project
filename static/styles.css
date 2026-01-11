@@ -290,7 +290,7 @@ button {
 }
 
 .back-projects-element {
-    color: violet;
+    color: white;
     background-color: black;
     position: fixed;
     width: 100%;
@@ -313,6 +313,8 @@ button {
 }
 
 #back-to-main-page {
+
+    whitespace: nowrap;
 
 }
 
