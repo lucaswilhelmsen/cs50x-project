@@ -62,7 +62,7 @@
     left: 50%;
     width: 100vw;
     height: 1px;
-    z-index: 1;
+    z-index: 20;
 }
 
 .second-white-line-horizontal {
@@ -72,10 +72,10 @@
     width: 100%;
     height: 100%;
     top: 25%;
-    left: 0%;
+    left: 53%;
     width: 100vw;
     height: 1px;
-    z-index: 5;
+    z-index: 1;
 }
 
 #image-location {
