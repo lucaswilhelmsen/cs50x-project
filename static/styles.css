@@ -289,6 +289,20 @@ button {
     z-index: 10;
 }
 
+.back-projects-element {
+    color: white;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 3%;
+    left: 7%;
+    height: 3.5vh;
+    width: 3.5vw;
+    z-index: 1;
+    text-decoration: none;
+}
+
 .text-size {
     
     font-size: 25px;
