@@ -41,6 +41,48 @@
 
         <script>
 
+        window.onload = function() {
+
+            document.getElementById("hello").classList.remove("show");
+
+            document.getElementById("hello").classList.add("show");
+
+            setTimeout(function() {
+
+                document.getElementById("hello").classList.add("remove-show");
+
+            }, 2000);
+
+            document.getElementById("welcome").classList.remove("show");
+
+            setTimeout(function() {
+
+                document.getElementById("welcome").classList.add("show");
+
+            }, 4000);
+
+
+            setTimeout(function() {
+
+                document.getElementById("welcome").classList.add("remove-show");
+
+            }, 9000);
+
+            setTimeout(function() {
+                document.getElementById("glad").classList.add("show");
+            }, 11000);
+
+            setTimeout(function() {
+                document.getElementById("glad").classList.add("show");
+            }, 13000);
+
+            setTimeout(function() {
+                document.getElementById("glad").classList.add("remove-show");
+            }, 16000);
+
+
+        };            
+
             document.getElementById("projects").addEventListener("mouseover", function () {
             document.getElementById("projects").style.textDecoration = "underline";
         });

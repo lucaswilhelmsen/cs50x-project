@@ -308,6 +308,62 @@ button {
     font-size: 25px;
 }
 
+#title {
+    position: absolute;
+    color: white;
+    top: 80px;
+    left: 45px;
+}
+
+#hello {
+    color: black;
+    position: absolute;
+    font-size: 32px;
+    top: 190px;
+    left: 890px;
+    z-index: 1;
+
+}
+
+#welcome {
+    color: black;
+    position: absolute;
+    font-size: 32px;
+    top: 190px;
+    left: 770px;
+    z-index: 1;
+
+}
+
+#glad {
+    color: black;
+    position: absolute;
+    font-size: 32px;
+    top: 190px;
+    left: 790px;
+    z-index: 1;
+
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 2s ease-out-in;
+}
+
+.show {
+    opacity: 1;
+}
+
+.remove-show {
+    opacity: 0;
+}
+
+
 #projects {
 
 }
