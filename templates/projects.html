@@ -30,7 +30,11 @@
             
         </div>
 
-        <img class="image-location-project" src="{{ projects.image-address }}" alt="Missing image">
+        {% for project in projects %}
+
+        <img class="image-location-project" src="{{ project['image-address'] }}" alt="Missing image">
+
+        {% endfor %}
 
         <h1 class="project-title">{{ projects.project-title }}</h1>
 
