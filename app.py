@@ -17,7 +17,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/index")
-def index():
+def back_index():
     return render_template("index.html")
 
 @app.route("/projects")
