@@ -31,20 +31,19 @@
         </div>
 
         {% for project in projects %}
-
+        
         <img class="image-location-project" src="{{ project['image-address'] }}" alt="Missing image">
+        <h1 class="project-title">{{ project['project-title'] }}</h1>
 
-        {% endfor %}
-
-        <h1 class="project-title">{{ projects.project-title }}</h1>
-
-        <a href="{{ projects.github-link }}" class="github-repository text-size">
+        <a href="{{ project['github-link'] }}" class="github-repository text-size">
             GitHub Repository
         </a>
 
         <h1 class="README">
-            {{ projects }}
+            {{ project['readme'] }}
         </h1>
+
+        {% endfor %}
 
         <script>
             document.getElementById("projects").addEventListener("mouseover", function () {
