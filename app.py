@@ -19,7 +19,7 @@ def index():
 @app.route("/projects")
 def projects():
     session = Session()
-    result = session.execute(text("SELECT "image-address", "project-title", "github-link", "readme" FROM projects")).fetchall()
+    result = session.execute(text('SELECT "image-address", "project-title", "github-link", "readme" FROM projects')).fetchall()
     session.close()
     data_list = []
     for row in result:
