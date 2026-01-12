@@ -1,4 +1,4 @@
-# CS50x Personal site
+# Personal site
 #### Video Demo:  <URL HERE>
 #### Description:
 For my final project in CS50x, I decided to heavily expand on the idea of creating 
