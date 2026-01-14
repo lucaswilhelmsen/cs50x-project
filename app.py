@@ -12,6 +12,12 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 engine = create_engine(app.config["SQLALCHEMY_DATABASE_URI"])
 Session = sessionmaker(bind=engine)
 
+@app.template_filter()
+def add_linebreak(value):
+    return value.replace("\n", "<br>")
+    
+
+
 @app.route("/")
 def index():
     return render_template("index.html")

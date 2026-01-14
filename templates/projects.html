@@ -45,7 +45,7 @@
             README
         </h1>
         <p class="README">
-            {{ project['readme'] }}
+            {{ project['readme']|add_linebreak }}
         </p>
         {% endfor %}
 
