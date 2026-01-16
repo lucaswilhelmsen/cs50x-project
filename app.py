@@ -17,6 +17,7 @@ def add_linebreak(value):
     if value:
         return value.replace("\n", "<br>")
 
+
 @app.route("/")
 def index():
     return render_template("index.html")
