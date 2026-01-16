@@ -1,7 +1,7 @@
 from flask import Flask, request, session, render_template, redirect
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
-import os
+import os 
 
 templates = os.path.dirname(__file__)
 
@@ -12,31 +12,23 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 engine = create_engine(app.config["SQLALCHEMY_DATABASE_URI"])
 Session = sessionmaker(bind=engine)
 
-
 @app.template_filter()
 def add_linebreak(value):
     if value:
         return value.replace("\n", "<br>")
 
-
 @app.route("/")
 def index():
     return render_template("index.html")
-
 
 @app.route("/index")
 def back_index():
     return render_template("index.html")
 
-
 @app.route("/projects")
 def projects():
     session = Session()
-    result = session.execute(
-        text(
-            'SELECT "image-address", "project-title", "github-link", "readme" FROM projects'
-        )
-    ).fetchall()
+    result = session.execute(text('SELECT "image-address", "project-title", "github-link", "readme" FROM projects')).fetchall()
     session.close()
     data_list = []
     for row in result:
@@ -44,7 +36,7 @@ def projects():
             "image-address": row[0],
             "project-title": row[1],
             "github-link": row[2],
-            "readme": row[3],
+            "readme": row[3]
         }
 
         data_list.append(project_dict)
@@ -52,16 +44,16 @@ def projects():
     return render_template("projects.html", projects=data_list)
 
 
+
 @app.route("/writing")
 def writing():
     return render_template("writing.html")
-
 
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
-
 @app.route("/pictures")
 def pictures():
     return render_template("pictures.html")
+
