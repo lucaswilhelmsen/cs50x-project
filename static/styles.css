@@ -291,6 +291,8 @@ button {
 }
 
 .README {
+    overflow-y: auto;
+    max-height: fit-content;
     background-color: grey;
     position: fixed;
     width: 100%;
