@@ -14,9 +14,8 @@ Session = sessionmaker(bind=engine)
 
 @app.template_filter()
 def add_linebreak(value):
-    return value.replace("\n", "<br>")
-    
-
+    if value:
+        return value.replace("\n", "<br>")
 
 @app.route("/")
 def index():
